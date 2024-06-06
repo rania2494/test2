@@ -1,0 +1,27 @@
+#test {
+    width: 400px;
+    height: 400px;
+    background-color: teal !important;
+    padding: 10px;
+}
+
+
+#test:hover {
+
+}
+
+
+#test::before {
+
+}
+
+
+
+p {
+    font-size: 20px;
+}
+
+p::selection {
+    background-color: teal;
+    color: white;
+}

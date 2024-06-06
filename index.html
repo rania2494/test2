@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="w-50 mx-auto py-5">
+        <h2 class="mb-5">Product management system</h2>
+        <div class="form-group mb-3">
+            <label for="productName" class="mb-2">productName :</label>
+            <input type="text" id="productName" onkeyup="validateProductName()" class="form-control">
+            <p class="text-danger d-none" id="name-validation">please check your input (suppose to start with capital )</p>
+        </div>
+        <div class="form-group mb-3">
+            <label for="productPrice" class="mb-2">productPrice :</label>
+            <input type="number" id="productPrice" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="productCat" class="mb-2">productCat</label>
+            <input type="text" id="productCat" class="form-control">
+        </div>
+        <div class="form-group mb-3">
+            <label for="productDesc" class="mb-2">productDesc</label>
+            <input type="text" id="productDesc" class="form-control">
+        </div>
+        <button class="btn btn-outline-info" onclick="addProduct()" id="mainBtn">Add product</button>
+        <button class="btn btn-outline-warning d-none" onclick="update()" id="updateBtn">updateBtn</button>
+
+    </div>
+
+
+
+    <div class="w-50 mx-auto">
+        <h4>Search</h4>
+        <input type="text" oninput="search()" id="inputSearch" class="form-control mb-5">
+
+        <table class="table text-center">
+            <thead>
+                <th>index</th>
+                <th>ProductName</th>
+                <th>ProductPrice</th>
+                <th>ProductCategory</th>
+                <th>ProductDesc</th>
+                <th>Update</th>
+                <th>Delete</th>
+
+
+            </thead>
+            <tbody id="productData">
+               
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="./js/index.js"></script>
+</body>
+
+
+
+
+<!-- 
+
+    sql injection 
+    select * from user
+
+
+
+ -->
+
+</html>
